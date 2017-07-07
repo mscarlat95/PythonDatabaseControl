@@ -79,20 +79,28 @@ def createTable(tableName, hashset):
 	global conn
 	check_is_connected()
 
-	command = "SELECT %s FROM %s;" % ("*", tableName)
+	command = "SHOW TABLES LIKE '%s'" % tableName
 	cursor = performQuery(command)
-	rows = cursor.fetchall()
-	if len (rows) != 0:
+	result = cursor.fetchone()
+	if result:
+		# update table columns in case of existing
+		command = "SELECT %s FROM %s;" % ("*", tableName)
+		cursor = performQuery(command)
+		rows = cursor.fetchall()
+		if len (rows) != 0:
+			for key, value in hashset.iteritems():
+				addColumn(tableName, key, "varchar(30)");
+			log.updateLogFile("Table %s is updated" % tableName)
+	else:
+		# create table is it doesn t exist in database
+		command = "CREATE TABLE IF NOT EXISTS %s (" % tableName
 		for key, value in hashset.iteritems():
-			addColumn(tableName, key, "varchar(30)");
+			command += key + " varchar(30), "
+		command = command[0: len(command) - 2] + ");"
+		cursor = performQuery(command)
+		log.updateLogFile("Table %s is created" % tableName)
 
-	command = "CREATE TABLE IF NOT EXISTS %s (" % tableName
-	for key, value in hashset.iteritems():
-		command += key + " varchar(30), "
-	command = command[0: len(command) - 2] + ");"
-	performQuery(command)
-
-	log.updateLogFile("Table %s is created" % tableName)
+	
 
 def insertIntoTable(tableName, hashset):
 	global conn

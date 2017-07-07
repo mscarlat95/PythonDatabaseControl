@@ -22,8 +22,14 @@ if __name__ == "__main__":
 	db.connect()
 	
 	# create dictionary based on inputFile's content 
-	hashset = parser.parseFile(inputFile, separator)
-	
+	hashset = {}
+	try:
+		hashset = parser.parseFile(inputFile, direction, separator)
+	except ValueError as err:
+		log.updateLogFile(str(err))
+		db.disconnect()
+		sys.exit(0)
+
 	# create table if it doesn't exists
 	db.createTable(tableName, hashset)
 
@@ -34,7 +40,7 @@ if __name__ == "__main__":
 	db.displayTableContent(tableName, "*")
 
 	# clear table
-	db.clearTable(tableName)
+	# db.clearTable(tableName)
 
 	# close connection to database
 	db.disconnect()
