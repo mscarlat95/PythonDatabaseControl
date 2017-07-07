@@ -1,0 +1,109 @@
+2017/07/07 13:38:45:	--------------------	SESSION STARTED	--------------------
+
+2017/07/07 13:38:45:	Opening connection ... 
+
+2017/07/07 13:38:45:	File parsing: Successful
+
+2017/07/07 13:38:45:	Perform:	SHOW TABLES LIKE 'testTable'
+
+2017/07/07 13:38:45:	Perform:	SELECT * FROM testTable;
+
+2017/07/07 13:38:45:	Perform:	SHOW COLUMNS FROM testTable LIKE "Name";
+
+2017/07/07 13:38:45:	Perform:	SHOW COLUMNS FROM testTable LIKE "Id";
+
+2017/07/07 13:38:45:	Perform:	SHOW COLUMNS FROM testTable LIKE "Birthdate";
+
+2017/07/07 13:38:45:	Perform:	SHOW COLUMNS FROM testTable LIKE "Address";
+
+2017/07/07 13:38:45:	Table testTable is updated
+
+2017/07/07 13:38:45:	Perform:	INSERT INTO testTable(Name, Id, Birthdate, Address) values("John", "1231", "2000", "Bulgaria");
+
+2017/07/07 13:38:45:	Insert in table testTable done!
+
+2017/07/07 13:38:45:	Perform:	SELECT * FROM testTable;
+
+2017/07/07 13:38:45:	Printing testTable 's records:
+ Address       	       Id       	       Birthdate       	       Name       	       
+------------------------------------------------------------------------------------------
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Romania      	      846234      	      1992      	      Smith      	      
+Romania      	      846234      	      1992      	      Smith      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+ 
+
+2017/07/07 13:38:45:	Closing connection ... 
+
+2017/07/07 13:38:45:	--------------------	SESSION STOPPED	--------------------
+
+2017/07/07 13:40:34:	--------------------	SESSION STARTED	--------------------
+
+2017/07/07 13:40:34:	Opening connection ... 
+
+2017/07/07 13:40:34:	File parsing: Successful
+
+2017/07/07 13:40:34:	Perform:	SHOW TABLES LIKE 'testTable'
+
+2017/07/07 13:40:34:	Perform:	SELECT * FROM testTable;
+
+2017/07/07 13:40:35:	Perform:	SHOW COLUMNS FROM testTable LIKE "Name";
+
+2017/07/07 13:40:35:	Perform:	SHOW COLUMNS FROM testTable LIKE "Id";
+
+2017/07/07 13:40:35:	Perform:	SHOW COLUMNS FROM testTable LIKE "Birthdate";
+
+2017/07/07 13:40:35:	Perform:	SHOW COLUMNS FROM testTable LIKE "Address";
+
+2017/07/07 13:40:35:	Table testTable is updated
+
+2017/07/07 13:40:35:	Perform:	INSERT INTO testTable(Name, Id, Birthdate, Address) values("John", "1231", "2000", "Bulgaria");
+
+2017/07/07 13:40:35:	Insert in table testTable done!
+
+2017/07/07 13:40:35:	Perform:	SELECT * FROM testTable;
+
+2017/07/07 13:40:35:	Printing testTable 's records:
+ Address       	       Id       	       Birthdate       	       Name       	       
+------------------------------------------------------------------------------------------
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Romania      	      846234      	      1992      	      Smith      	      
+Romania      	      846234      	      1992      	      Smith      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+Bulgaria      	      1231      	      2000      	      John      	      
+ 
+
+2017/07/07 13:40:35:	Closing connection ... 
+
+2017/07/07 13:40:35:	--------------------	SESSION STOPPED	--------------------
+
+
+

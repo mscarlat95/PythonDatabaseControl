@@ -133,7 +133,7 @@ def displayTableContent(tableName, field):
 
 	# print column names
 	for field in cursor.description:
-		fld = str(field[0]) + "\t"
+		fld = str(field[0]) + "       \t       "
 		count += len(fld) + 2
 		result += fld
 	else:
@@ -146,7 +146,7 @@ def displayTableContent(tableName, field):
 	# print rows 
 	for row in rows:
 		for i in xrange(len(row)):
-			result += (str(row[i]) + "\t")
+			result += (str(row[i]) + "      \t      ")
 		else:
 			result += "\n"
 

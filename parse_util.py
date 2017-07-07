@@ -28,15 +28,24 @@ def parseByColumns(inputFile, separator):
 
 def parseByRows(inputFile, separator):
 	hashset = {}
+	rows = columns = []
 
-	rows = []
-	columns = []
 	with open(inputFile, 'r') as fin:
-		if len(fin) == 2:
-			rows = fin[0].split (separator)
-			columns = fin[1].split (separator)
+
+		lines = fin.readlines()
+
+		if len(lines) == 2:
+			columns = lines[0].split (separator)
+			rows = lines[1].split (separator)
 		else:
 			raise ValueError(invalid_format_err)
+
+	if len (rows) != len (columns):
+		raise ValueError(invalid_format_err)
+	else:
+		for i in xrange (len(rows)):
+			hashset = updateHashset(hashset, columns[i], rows[i])
+		return hashset
 
 # parse input file content
 def parseFile(inputFile, direction, separator):
@@ -53,4 +62,5 @@ def parseFile(inputFile, direction, separator):
 	if result == {}:
 		raise ValueError(invalid_format_err)
 	else:
+		log.updateLogFile("File parsing: Successful")
 		return result

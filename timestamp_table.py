@@ -16,7 +16,9 @@ if __name__ == "__main__":
 	separator = sys.argv[3]
 	direction = sys.argv[4]
 
-	log.clearLogFile()
+	# log.clearLogFile()
+
+	log.updateLogFile("--------------------\tSESSION STARTED\t--------------------")
 
 	# connect to the database
 	db.connect()
@@ -44,3 +46,5 @@ if __name__ == "__main__":
 
 	# close connection to database
 	db.disconnect()
+
+	log.updateLogFile("--------------------\tSESSION STOPPED\t--------------------\n\n")
